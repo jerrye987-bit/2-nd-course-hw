@@ -338,6 +338,20 @@ button:hover {
     }
 }
 
+.footer {
+    background-color: rgba(189, 237, 53, 1);
+    min-height: 150px;
+
+    &__title {
+        color: rgba(0, 0, 0, 1);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        text-align: center;
+        padding-top: 61px;
+    }
+}
+
 // Версия для планшета (самодельная)
 @media (max-width: 1024px) {
     .center {

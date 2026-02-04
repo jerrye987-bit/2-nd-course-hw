@@ -304,6 +304,19 @@ button:hover {
   order: 2;
 }
 
+.footer {
+  background-color: rgb(189, 237, 53);
+  min-height: 150px;
+}
+.footer__title {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: center;
+  padding-top: 61px;
+}
+
 @media (max-width: 1024px) {
   .center {
     padding-left: calc(50% - 426px);
