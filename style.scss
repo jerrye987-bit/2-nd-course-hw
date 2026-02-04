@@ -98,6 +98,29 @@ button:hover {
         text-align: left;
     }
 
+    &__btn {
+        box-sizing: border-box;
+        border: 1px solid rgba(32, 32, 39, 1);
+        border-radius: 60px;
+        background: rgba(32, 32, 39, 1);
+        max-height: 66px;
+        font: inherit;
+        padding: 16px 65px;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 1);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 141.69%;
+        text-align: center;
+    }
+
+    &__btn:hover {
+        border: 1px solid rgba(0, 0, 0, 1);
+        border-radius: 60px;
+        color: rgba(32, 32, 39, 1);
+        background: #fff;
+    }
+
     &__star1 {
         position: absolute;
         top: -125px;
