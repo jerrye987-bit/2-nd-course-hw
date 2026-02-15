@@ -83,14 +83,14 @@ switch (os) {
 }
 
 // Задание 3
-let os = prompt('Введите 0, если ваша операционная система iOS, введите 1, если ваша операционная система Android');
+let oSystem = prompt('Введите 0, если ваша операционная система iOS, введите 1, если ваша операционная система Android');
 let clientDeviceYear = prompt('Введите год производства вашего устройства');
 let numcDY = Number(clientDeviceYear)
 if (isNaN(numcDY)) {
     console.log('Год производства устройства введен некорректно!')
 } else {
     if (clientDeviceYear < 2015) {
-        switch (os) {
+        switch (oSystem) {
             case '0':
                 console.log('Установите облегченную версию приложения для iOS по ссылке');
                 break;
@@ -102,7 +102,7 @@ if (isNaN(numcDY)) {
                 break;
         }
     } else {
-        switch (os) {
+        switch (oSystem) {
             case '0':
                 console.log('Установите версию приложения для iOS по ссылке');
                 break;
