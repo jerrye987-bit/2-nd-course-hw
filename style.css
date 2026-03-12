@@ -465,6 +465,7 @@ button:hover {
   }
   .mini-game-content {
     align-items: center;
+    padding-bottom: 10px;
   }
   .mini-game-content__star8 {
     display: none;
