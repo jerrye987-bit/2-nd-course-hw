@@ -146,7 +146,13 @@ for (let i = 0; i < 10; i++) {
     randomArr.push(randomNum()); 
 }
 
-const evenArr = randomArr.filter(el => el % 2 === 0);
+const evenArr = [];
+
+for (let i = 0; i < randomArr.length; i++) {
+    if (randomArr[i] % 2 === 0) {
+        evenArr.push(randomArr[i]);
+    }  
+}
 
 console.log(randomArr);
 console.log(evenArr);
@@ -163,7 +169,7 @@ for (let i = 0; i < 6; i++) {
     randomArr15.push(randomNum15()); 
 }
 
-let sum = randomArr15.reduce((acc, curr) => acc + curr);
+let sum = randomArr15.reduce((a, b) => a + b);
 let arithmeticMean = sum / randomArr15.length;
 
 console.log(arithmeticMean);
