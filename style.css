@@ -328,6 +328,9 @@ button:hover {
 .mini__back2 {
   order: 2;
 }
+.mini__alignment {
+  justify-content: start;
+}
 
 .footer {
   background-color: rgb(189, 237, 53);

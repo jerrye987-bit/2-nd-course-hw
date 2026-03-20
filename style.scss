@@ -316,6 +316,7 @@ button:hover {
         top: 3225px;
         left: 1015px;
     }
+
  }
 
 .mini {
@@ -362,6 +363,10 @@ button:hover {
 
     &__back2 {
         order: 2;
+    }
+
+    &__alignment {
+        justify-content: start;
     }
 }
 
