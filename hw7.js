@@ -61,3 +61,23 @@ console.log(`Текущая дата: ${new Date().toLocaleDateString()}`);
 let currentDate = new Date();
 currentDate.setDate(currentDate.getDate() + 73);
 console.log(`Дата через 73 дня: ${currentDate.toLocaleDateString()}`);
+
+// Задача 10
+function formatDate(date) {
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const day = date.getDate();
+    const dayWeek = date.getDay();
+    const hours = date.getHours();
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const seconds = date.getSeconds().toString().padStart(2, '0');
+    const rusDay = ['Воскресенье', 'Понедельник', "Вторник", 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+    const rusMonth = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+    
+
+    return `Дата: ${day} ${rusMonth[month]} ${year} - это ${rusDay[dayWeek]}.
+Время: ${hours}:${minutes}:${seconds}`;
+
+}
+
+console.log(formatDate(new Date()));
