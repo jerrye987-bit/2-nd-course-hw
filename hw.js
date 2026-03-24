@@ -1,3 +1,4 @@
+// Игра 1. Угадай число
 function game1() {
     let secretNumber = Math.floor(Math.random() * 100) + 1;
    
@@ -22,6 +23,7 @@ function game1() {
 }
 
 
+// Игра 2. Простая арифметика
 function game2() {
     function rndNum() {
         return Math.floor(Math.random() * 10 + 1);
@@ -77,6 +79,7 @@ function game2() {
 }
 
 
+// Игра 3. Переверни текст
 function game3() {
     let text = prompt('Введите текст');
     if (text) {
@@ -92,6 +95,10 @@ function game3() {
 
 
 
+// Игра 4. Камень, ножницы, бумага
+
+
+// Игра 5. Простая викторина
 const quiz = [
            {
                question: "Какой цвет неба?",
@@ -131,3 +138,6 @@ function game5(quiz) {
 
     alert(`Игра окончена. Правильных ответов ${points} из ${quiz.length}`);
 }
+
+
+// Игра 6. Генератор случайных цветов
