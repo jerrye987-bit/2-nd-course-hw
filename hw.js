@@ -91,8 +91,8 @@ function game3() {
 }
 
 
-function game5() {
-    const quiz = [
+
+const quiz = [
            {
                question: "Какой цвет неба?",
                options: ["1. Красный", "2. Синий", "3. Зеленый"],
@@ -110,6 +110,7 @@ function game5() {
            }
        ];
 
+function game5(quiz) {
     let points = 0;
      
     for (let i = 0; i < quiz.length; i++) {
