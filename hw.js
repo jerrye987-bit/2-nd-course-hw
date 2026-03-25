@@ -96,7 +96,40 @@ function game3() {
 
 
 // Игра 4. Камень, ножницы, бумага
+function computerMove() {
+    const arrMoves = ['камень', 'ножницы', 'бумага'];
+    let randomIndex = Math.floor(Math.random() * 3);
 
+    return arrMoves[randomIndex];
+}
+
+function game4() {
+    let playerChois = prompt('Сделайте ход.\nВведите: камень, ножницы или бумага.');
+    let computerChois = computerMove();
+
+    if (playerChois) {
+        let playerChoisStr = playerChois.toLowerCase();
+        if ((playerChoisStr !== 'камень') && (playerChoisStr !== 'ножницы') && (playerChoisStr !== 'бумага')) {
+            alert('Ты ввел некорректное значение.');
+    } else {
+        if (playerChoisStr === computerChois) {
+            alert(`Ничья.\nОба выбрали ${playerChoisStr}`);
+        } else {
+            if ((computerChois === 'камень' && playerChoisStr === 'ножницы') ||
+                (computerChois === 'ножницы' && playerChoisStr === 'бумага') ||
+                (computerChois === 'бумага' && playerChoisStr === 'камень')
+        ) {
+            alert(`Твой ход - ${playerChois},\nход компьютера - ${computerChois}.\nТы проиграл.`);
+                
+            } else {
+                alert(`Твой ход - ${playerChoisStr},\nход компьютера - ${computerChois}.\nТы выиграл.`);
+            }
+        }
+    }
+    } else {
+        alert('Игра окончена.')
+    }
+}
 
 // Игра 5. Простая викторина
 const quiz = [
