@@ -1,3 +1,4 @@
+// Игра 1. Угадай число
 function game1() {
     let secretNumber = Math.floor(Math.random() * 100) + 1;
    
@@ -22,6 +23,7 @@ function game1() {
 }
 
 
+// Игра 2. Простая арифметика
 function game2() {
     function rndNum() {
         return Math.floor(Math.random() * 10 + 1);
@@ -77,6 +79,7 @@ function game2() {
 }
 
 
+// Игра 3. Переверни текст
 function game3() {
     let text = prompt('Введите текст');
     if (text) {
@@ -92,6 +95,43 @@ function game3() {
 
 
 
+// Игра 4. Камень, ножницы, бумага
+function computerMove() {
+    const arrMoves = ['камень', 'ножницы', 'бумага'];
+    let randomIndex = Math.floor(Math.random() * 3);
+
+    return arrMoves[randomIndex];
+}
+
+function game4() {
+    let playerChois = prompt('Сделайте ход.\nВведите: камень, ножницы или бумага.');
+    let computerChois = computerMove();
+
+    if (playerChois) {
+        let playerChoisStr = playerChois.toLowerCase();
+        if ((playerChoisStr !== 'камень') && (playerChoisStr !== 'ножницы') && (playerChoisStr !== 'бумага')) {
+            alert('Ты ввел некорректное значение.');
+    } else {
+        if (playerChoisStr === computerChois) {
+            alert(`Ничья.\nОба выбрали ${playerChoisStr}`);
+        } else {
+            if ((computerChois === 'камень' && playerChoisStr === 'ножницы') ||
+                (computerChois === 'ножницы' && playerChoisStr === 'бумага') ||
+                (computerChois === 'бумага' && playerChoisStr === 'камень')
+        ) {
+            alert(`Твой ход - ${playerChois},\nход компьютера - ${computerChois}.\nТы проиграл.`);
+                
+            } else {
+                alert(`Твой ход - ${playerChoisStr},\nход компьютера - ${computerChois}.\nТы выиграл.`);
+            }
+        }
+    }
+    } else {
+        alert('Игра окончена.')
+    }
+}
+
+// Игра 5. Простая викторина
 const quiz = [
            {
                question: "Какой цвет неба?",
@@ -131,3 +171,6 @@ function game5(quiz) {
 
     alert(`Игра окончена. Правильных ответов ${points} из ${quiz.length}`);
 }
+
+
+// Игра 6. Генератор случайных цветов

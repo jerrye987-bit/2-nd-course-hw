@@ -116,6 +116,9 @@ button:hover {
   color: rgb(32, 32, 39);
   background: #fff;
 }
+.top__btn-mobyle {
+  display: none;
+}
 .top__star1 {
   position: absolute;
   top: -125px;
@@ -410,6 +413,9 @@ button:hover {
   .top__bold-word {
     display: none;
   }
+  .top__btn {
+    display: none;
+  }
   .top__subtitle-mobyle {
     display: block;
     font-size: 16px;
@@ -424,11 +430,24 @@ button:hover {
     line-height: 20px;
     text-align: center;
   }
-  .top__btn {
+  .top__btn-mobyle {
     display: block;
     margin-left: 46px;
     margin: 36px auto;
     max-width: 285px;
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    background: rgb(32, 32, 39);
+    max-height: 66px;
+    font: inherit;
+    padding: 16px 65px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 141.69%;
+    text-align: center;
   }
   .top__star1 {
     position: absolute;
