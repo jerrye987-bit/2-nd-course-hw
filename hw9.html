@@ -7,6 +7,119 @@
 </head>
 <body>
     <h1>Задание 9</h1>
-    <script src="./hw8.js"></script>
+    <!-- Задача 1 HTML-->
+     <h1 class="heading">Задача 1</h1>
+     <button class="btn">Скрыть заголовок.</button>
+
+    <!-- Задача 2 HTML -->
+    <h1>Задача 2</h1>
+    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, repudiandae!</p>
+    <button class="btn2">Изменить цвет текста</button>
+
+    <!-- Задача 3 HTML -->
+    <h1 class="heading3">Задача 3</h1>
+    <button class="btn3">Изменить текст</button>
+
+    <!-- Задача 4 HTML -->
+    <h1>Задача 4</h1>
+    <p class="description4">Lorem, ipsum dolor.</p>
+    <p class="description4">Lorem ipsum dolor sit.</p>
+    <p class="description4">Lorem ipsum dolor sit amet.</p>
+
+    <!-- Задача 5 HTML -->
+    <h1>Задача 5</h1>
+    <p class="non-desc">Текст не изменится</p>
+    <p class="description5">Lorem, ipsum dolor.</p>
+    <p class="description5">Lorem ipsum dolor sit.</p>
+    <p class="non-desc">Текст не изменится</p>
+    <p class="description5">Lorem ipsum dolor sit amet.</p>
+    <p class="non-desc">Текст не изменится</p>
+
+    <!-- Задача 6 HTML -->
+    <h1>Задача 6</h1>
+    <button class="btn6">Добавить элемент</button>
+
+    <!-- Задача 7 HTML -->
+     <h1>Задача 7</h1>
+    <p class="any-class">Текст с другим классом</p>
+    <p class="description7">Текст для удаления</p>
+    <p class="description7">Текст не удалится</p>
+    <p class="any-class">Текст с другим классом</p>
+    <p class="description7">Текст не удалится</p>
+    <p class="ani-class">Текст с другим классом</p>
+    <button class="btn7">Удали элемент</button>
+
+    <script>
+    // Задача 1 js
+        const btnEl = document.querySelector('.btn');
+        const headingEl = document.querySelector('.heading');
+
+        btnEl.addEventListener('click', () => {
+            if (headingEl.style.display === 'none') {
+                headingEl.style.display = 'block';
+                btnEl.textContent = 'Скрыть заголовок.';
+            } else {
+                headingEl.style.display = 'none';
+                btnEl.textContent = 'Показать заголовок.';
+            }
+        }
+        );
+    
+    // Задача 2 js
+        const descriptionEl = document.querySelector('.description');
+        const btn2El = document.querySelector('.btn2');
+
+        btn2El.addEventListener('click', () => {
+            descriptionEl.style.color = 'blue';
+        }
+        );
+
+    // Задача 3 js
+        const heading3El = document.querySelector('.heading3');
+        const btn3El = document.querySelector('.btn3');
+
+        btn3El.addEventListener('click', () => {
+            heading3El.textContent = 'Привет, мир!'
+        }
+        );
+
+    // Задача 4 js
+        const allDescriptions4El = document.querySelectorAll('.description4');
+
+        allDescriptions4El.forEach(description4 => {
+            description4.textContent = 'Измененный текст';
+        }
+        );
+
+
+    // Задача 5 js  
+        const allDescriptions5El = document.querySelectorAll('.description5');
+
+        allDescriptions5El.forEach(description5 => {
+            description5.textContent = 'Новый текст';
+        }
+        );
+    
+    // Задача 6 js
+        const btn6El = document.querySelector('.btn6');
+
+        btn6El.addEventListener('click', () => {
+            const newText = document.createElement('div');
+
+            newText.textContent = 'Новый абзац';
+            document.body.appendChild(newText);
+        }
+        );
+
+    // Задача 7 js
+        const description7El = document.querySelector('.description7');
+        const btn7El = document.querySelector('.btn7');
+
+         btn7El.addEventListener('click', () => {
+            description7El.remove();
+        }
+        );
+
+    </script>
 </body>
 </html>
