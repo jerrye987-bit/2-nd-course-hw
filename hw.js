@@ -174,3 +174,23 @@ function game5(quiz) {
 
 
 // Игра 6. Генератор случайных цветов
+function getRandomColor() {
+    const arrRandomColor = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' ];
+    let colorRandom = '#';
+
+    for (let i = 0; i < 6; i++) {
+        const indexRandom = Math.floor(Math.random() * arrRandomColor.length);
+
+        colorRandom += arrRandomColor[indexRandom];
+    }
+    return colorRandom;
+}
+
+function game6() {
+    const newColor = getRandomColor();
+    const section = document.querySelector('.mini-game');
+    
+    if (section) {
+        section.style.backgroundColor = newColor; 
+    }
+}
