@@ -93,9 +93,49 @@ function game3() {
     }    
 }
 
+// Игра 4. Простая викторина
+const quiz = [
+           {
+               question: "Какой цвет неба?",
+               options: ["1. Красный", "2. Синий", "3. Зеленый"],
+               correctAnswer: 2
+           },
+           {
+               question: "Сколько дней в неделе?",
+               options: ["1. Шесть", "2. Семь", "3. Восемь"],
+               correctAnswer: 2
+           },
+           {
+               question: "Сколько у человека пальцев на одной руке?",
+               options: ["1. Четыре", "2. Пять", "3. Шесть"],
+               correctAnswer: 2
+           }
+       ];
+
+function game4(quiz) {
+    let points = 0;
+     
+    for (let i = 0; i < quiz.length; i++) {
+        let userAnswer = prompt(`${quiz[i].question}\n${quiz[i].options.join('\n')}\nВведите номер правильного ответа.`);
+        
+        if (userAnswer === null) {
+            alert(`Ты прервал игру.`);
+            break;
+        }
+
+        if (parseInt(userAnswer) === quiz[i].correctAnswer) {
+            alert('Верно!');
+            points++;
+        } else {
+            alert(`Ответ не верный. Правильный ответ ${quiz[i].correctAnswer}`);
+        } 
+    }
+
+    alert(`Игра окончена. Правильных ответов ${points} из ${quiz.length}`);
+}
 
 
-// Игра 4. Камень, ножницы, бумага
+// Игра 5. Камень, ножницы, бумага
 function computerMove() {
     const arrMoves = ['камень', 'ножницы', 'бумага'];
     let randomIndex = Math.floor(Math.random() * 3);
@@ -103,7 +143,7 @@ function computerMove() {
     return arrMoves[randomIndex];
 }
 
-function game4() {
+function game5() {
     let playerChois = prompt('Сделайте ход.\nВведите: камень, ножницы или бумага.');
     let computerChois = computerMove();
 
@@ -129,47 +169,6 @@ function game4() {
     } else {
         alert('Игра окончена.')
     }
-}
-
-// Игра 5. Простая викторина
-const quiz = [
-           {
-               question: "Какой цвет неба?",
-               options: ["1. Красный", "2. Синий", "3. Зеленый"],
-               correctAnswer: 2
-           },
-           {
-               question: "Сколько дней в неделе?",
-               options: ["1. Шесть", "2. Семь", "3. Восемь"],
-               correctAnswer: 2
-           },
-           {
-               question: "Сколько у человека пальцев на одной руке?",
-               options: ["1. Четыре", "2. Пять", "3. Шесть"],
-               correctAnswer: 2
-           }
-       ];
-
-function game5(quiz) {
-    let points = 0;
-     
-    for (let i = 0; i < quiz.length; i++) {
-        let userAnswer = prompt(`${quiz[i].question}\n${quiz[i].options.join('\n')}\nВведите номер правильного ответа.`);
-        
-        if (userAnswer === null) {
-            alert(`Ты прервал игру.`);
-            break;
-        }
-
-        if (parseInt(userAnswer) === quiz[i].correctAnswer) {
-            alert('Верно!');
-            points++;
-        } else {
-            alert(`Ответ не верный. Правильный ответ ${quiz[i].correctAnswer}`);
-        } 
-    }
-
-    alert(`Игра окончена. Правильных ответов ${points} из ${quiz.length}`);
 }
 
 
